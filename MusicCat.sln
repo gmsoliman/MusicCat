@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicCat.WebAPI", "MusicCat.WebAPI\MusicCat.WebAPI.csproj", "{03116B95-8DBB-4C92-82FC-F8D00E1327D2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicCat.Data", "MusicCat.Data\MusicCat.Data.csproj", "{8E33D98B-4183-4700-844A-ADF5EDB6C7A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicCat.Services", "MusicCat.Services\MusicCat.Services.csproj", "{810D943F-7CC4-44C0-AB8B-B3AC12982153}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicCat.Models", "MusicCat.Models\MusicCat.Models.csproj", "{30D43A61-7B84-42B5-9A26-494519050D5A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{03116B95-8DBB-4C92-82FC-F8D00E1327D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03116B95-8DBB-4C92-82FC-F8D00E1327D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03116B95-8DBB-4C92-82FC-F8D00E1327D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E33D98B-4183-4700-844A-ADF5EDB6C7A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E33D98B-4183-4700-844A-ADF5EDB6C7A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E33D98B-4183-4700-844A-ADF5EDB6C7A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E33D98B-4183-4700-844A-ADF5EDB6C7A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{810D943F-7CC4-44C0-AB8B-B3AC12982153}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{810D943F-7CC4-44C0-AB8B-B3AC12982153}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{810D943F-7CC4-44C0-AB8B-B3AC12982153}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{810D943F-7CC4-44C0-AB8B-B3AC12982153}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30D43A61-7B84-42B5-9A26-494519050D5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30D43A61-7B84-42B5-9A26-494519050D5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30D43A61-7B84-42B5-9A26-494519050D5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30D43A61-7B84-42B5-9A26-494519050D5A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
