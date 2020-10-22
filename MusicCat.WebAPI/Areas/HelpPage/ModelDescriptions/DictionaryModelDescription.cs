@@ -1,0 +1,6 @@
+namespace MusicCat.WebAPI.Areas.HelpPage.ModelDescriptions
+{
+    public class DictionaryModelDescription : KeyValuePairModelDescription
+    {
+    }
+}
