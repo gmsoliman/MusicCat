@@ -58,6 +58,14 @@
     <Compile Include="ArtistDetail.cs" />
     <Compile Include="ArtistEdit.cs" />
     <Compile Include="ArtistListItem.cs" />
+    <Compile Include="AlbumCreate.cs" />
+    <Compile Include="AlbumDetail.cs" />
+    <Compile Include="AlbumEdit.cs" />
+    <Compile Include="AlbumListItem.cs" />
+    <Compile Include="GenreCreate.cs" />
+    <Compile Include="GenreDetail.cs" />
+    <Compile Include="GenreEdit.cs" />
+    <Compile Include="GenreListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
