@@ -9,6 +9,7 @@ namespace MusicCat.Models
     public class ArtistEdit
     {
         //tr
+        public int ArtistId { get; set; }
         public string ArtistName { get; set; }
         public string Hometown { get; set; }
         //tr

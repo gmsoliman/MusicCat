@@ -54,11 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArtistService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MusicCat.Data\MusicCat.Data.csproj">
+      <Project>{8E33D98B-4183-4700-844A-ADF5EDB6C7A0}</Project>
+      <Name>MusicCat.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MusicCat.Models\MusicCat.Models.csproj">
+      <Project>{30D43A61-7B84-42B5-9A26-494519050D5A}</Project>
+      <Name>MusicCat.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
