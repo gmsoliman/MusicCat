@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace MusicCat.Models
 {
+    //gs
     public class GenreListItem
     {
         public int GenreId { get; set; }
         public string Type { get; set; }
     }
+    //gs
 }

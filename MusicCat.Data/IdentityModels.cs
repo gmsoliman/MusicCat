@@ -66,5 +66,3 @@ namespace MusicCat.WebAPI.Models
     }
 }
 
-    
-}
