@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace MusicCat.Models
 {
+    //gs
     public class GenreCreate
     {
         [Required]
@@ -15,4 +16,5 @@ namespace MusicCat.Models
         public string Type { get; set; }
         public string Description { get; set; }
     }
+    //gs
 }
