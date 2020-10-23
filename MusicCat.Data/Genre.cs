@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,14 +10,20 @@ namespace MusicCat.Data
 {
     public class Genre
     {
+        [Key]
         public int GenreId { get; set; }
+        [Required]
+        public Guid OwnerId { get; set; }
+        [Required]
         public string Type { get; set; }
         public string Description { get; set; }
 
-        //foreignkey(nameof(album id))
-        //foreignkey(nameof(song id))
+        //[ForeignKey(nameof(Album))]
+        //public int AlbumId { get; set; }
+        //public virtual Album Album { get; set; }
 
-        //Tom Test
-        //gabe test
+        //[ForeignKey(nameof(Song))]
+        //public int SongId { get; set; }
+        //public virtual Song Song { get; set; }
     }
 }
