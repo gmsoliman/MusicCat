@@ -11,7 +11,7 @@ namespace MusicCat.Models
     {
         [Required]
         public string AlbumTitle { get; set; }
-        public DateTime Year { get; set; }
+        public int Year { get; set; }
 
     }
 }

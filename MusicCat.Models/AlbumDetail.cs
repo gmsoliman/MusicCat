@@ -10,7 +10,7 @@ namespace MusicCat.Models
     {
         public int AlbumId { get; set; }
         public string AlbumTitle { get; set; }
-        public DateTime Year { get; set; }
+        public int Year { get; set; }
 
         //foreignkey(nameof(artist id))
     }
