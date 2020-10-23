@@ -1,8 +1,10 @@
-﻿using System.Security.Claims;
+﻿using System.Data.Entity;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
+using MusicCat.Data;
 
 namespace MusicCat.WebAPI.Models
 {
@@ -29,5 +31,7 @@ namespace MusicCat.WebAPI.Models
         {
             return new ApplicationDbContext();
         }
+
+        public DbSet<Album> Albums { get; set; }
     }
 }
