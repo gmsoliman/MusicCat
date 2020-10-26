@@ -82,7 +82,7 @@ namespace MusicCat.Services
                 return ctx.SaveChanges() == 1;
             }
         }
-        public bool DeleteNote(int genreId)
+        public bool DeleteGenre(int genreId)
         {
             using (var ctx = new ApplicationDbContext())
             {
