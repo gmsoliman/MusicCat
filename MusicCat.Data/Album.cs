@@ -18,5 +18,6 @@ namespace MusicCat.Data
         public int Year { get; set; }
 
         //foreignkey(nameof(artist id))
+    }
        
 }
