@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicCat.Data
+namespace MusicCat.Models
 {
-    public class Genre
+    //gs
+    public class GenreDetail
     {
         public int GenreId { get; set; }
         public string Type { get; set; }
         public string Description { get; set; }
 
-        //foreignkey(nameof(album id))
-        //foreignkey(nameof(song id))
+        //Maybe add the number of artists, albums, or songs that fall under this genre?
     }
+    //gs
 }

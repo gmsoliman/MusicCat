@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicCat.Data
+namespace MusicCat.Models
 {
-    public class Artist
+    public class ArtistListItem
     {
+        //tr
         public int ArtistId { get; set; }
         public string ArtistName { get; set; }
         public string Hometown { get; set; }
-
+        //tr
     }
 }

@@ -13,5 +13,7 @@ namespace MusicCat.Data
         public decimal Length { get; set; }
 
         //foreignkey(nameof(album id))
+
+        //// betsy test two
     }
 }
