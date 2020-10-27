@@ -54,9 +54,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArtistService.cs" />
-    <Compile Include="AlbumService.cs" />
-    <Compile Include="GenreService.cs" />
+    <Compile Include="Services\ArtistService.cs" />
+    <Compile Include="Services\AlbumService.cs" />
+    <Compile Include="Services\GenreService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

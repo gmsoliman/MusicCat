@@ -10,6 +10,7 @@ using System.Web.Http;
 
 namespace MusicCat.WebAPI.Controllers
 {
+    //gs
     public class GenreController : ApiController
     {
         private GenreService CreateGenreService()
@@ -64,4 +65,5 @@ namespace MusicCat.WebAPI.Controllers
             return Ok();
         }
     }
+    //gs
 }
