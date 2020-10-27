@@ -1,5 +1,7 @@
-﻿using MusicCat.Data.Entities;
+using MusicCat.Data;
+using MusicCat.Data.Entities;
 using MusicCat.Models;
+using MusicCat.Models.Artist;
 using MusicCat.WebAPI.Models;
 using System;
 using System.Collections.Generic;

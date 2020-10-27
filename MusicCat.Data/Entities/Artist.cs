@@ -18,6 +18,9 @@ namespace MusicCat.Data.Entities
         public string ArtistName { get; set; }
         [Required]
         public string Hometown { get; set; }
+
+        //public virtual ICollection<Album> Albums { get; set; } = new List<Album>();
+        //public virtual ICollection<Song> Songs { get; set; } = new List<Song>();
         //tr
     }
 }
