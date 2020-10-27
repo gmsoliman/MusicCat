@@ -9,9 +9,12 @@ namespace MusicCat.Models
 {
     public class AlbumCreate
     {
+        //bh
         [Required]
         public string AlbumTitle { get; set; }
         public int Year { get; set; }
+
+        //bh
 
     }
 }
