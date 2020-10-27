@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
-using MusicCat.Data;
+using MusicCat.Data.Entities;
 
 namespace MusicCat.WebAPI.Models
 {
