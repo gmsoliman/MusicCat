@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicCat.Models
+namespace MusicCat.Models.Album
 {
     public class AlbumDetail
     {
@@ -13,7 +13,6 @@ namespace MusicCat.Models
         public string AlbumTitle { get; set; }
         public int Year { get; set; }
 
-        //foreignkey(nameof(artist id))
 
         //bh
     }
