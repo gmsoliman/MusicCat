@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity;
 using MusicCat.Models;
+using MusicCat.Models.Album;
+using MusicCat.Services;
 using MusicCat.Services.Services;
 using System;
 using System.Collections.Generic;

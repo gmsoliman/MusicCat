@@ -9,6 +9,7 @@ namespace MusicCat.Data.Entities
 {
     public class Album
     {
+        //bh
         [Key]
         public int AlbumId { get; set; }
         [Required]
@@ -17,7 +18,10 @@ namespace MusicCat.Data.Entities
         public string AlbumTitle { get; set; }
         public int Year { get; set; }
 
-        //foreignkey(nameof(artist id))
-    }
-       
+        //[ForeignKey(nameof(Artist))]
+        //public int ArtistId { get; set; }
+        //public virtual Artist Artist { get; set; }
+
+    } //bh
+
 }
