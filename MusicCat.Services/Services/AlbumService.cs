@@ -1,4 +1,4 @@
-﻿using MusicCat.Data;
+using MusicCat.Data;
 using MusicCat.Data.Entities;
 using MusicCat.Models;
 using MusicCat.Models.Album;

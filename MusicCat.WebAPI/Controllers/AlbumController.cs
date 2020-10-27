@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity;
 using MusicCat.Models;
 using MusicCat.Models.Album;
 using MusicCat.Services;
