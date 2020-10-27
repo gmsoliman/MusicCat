@@ -10,6 +10,7 @@ namespace MusicCat.Data
 {
     public class Genre
     {
+        //gs
         [Key]
         public int GenreId { get; set; }
         [Required]
@@ -25,5 +26,7 @@ namespace MusicCat.Data
         //[ForeignKey(nameof(Song))]
         //public int SongId { get; set; }
         //public virtual Song Song { get; set; }
+
+        //gs
     }
 }
