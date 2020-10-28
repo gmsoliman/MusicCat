@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicCat.Models
+namespace MusicCat.Models.Album
 {
-    public class AlbumCreate
+    public class AlbumDetail
     {
         //bh
-        [Required]
+        public int AlbumId { get; set; }
         public string AlbumTitle { get; set; }
         public int Year { get; set; }
 
-        //bh
 
+        //bh
     }
 }

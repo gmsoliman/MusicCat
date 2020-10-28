@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicCat.Models
+namespace MusicCat.Models.Artist
 {
-    public class ArtistListItem
+    public class ArtistDetail
     {
         //tr
         public int ArtistId { get; set; }

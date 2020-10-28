@@ -54,18 +54,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArtistCreate.cs" />
-    <Compile Include="ArtistDetail.cs" />
-    <Compile Include="ArtistEdit.cs" />
-    <Compile Include="ArtistListItem.cs" />
-    <Compile Include="AlbumCreate.cs" />
-    <Compile Include="AlbumDetail.cs" />
-    <Compile Include="AlbumEdit.cs" />
-    <Compile Include="AlbumListItem.cs" />
-    <Compile Include="GenreCreate.cs" />
-    <Compile Include="GenreDetail.cs" />
-    <Compile Include="GenreEdit.cs" />
-    <Compile Include="GenreListItem.cs" />
+    <Compile Include="Artist\ArtistCreate.cs" />
+    <Compile Include="Artist\ArtistDetail.cs" />
+    <Compile Include="Artist\ArtistEdit.cs" />
+    <Compile Include="Artist\ArtistListItem.cs" />
+    <Compile Include="Album\AlbumCreate.cs" />
+    <Compile Include="Album\AlbumDetail.cs" />
+    <Compile Include="Album\AlbumEdit.cs" />
+    <Compile Include="Album\AlbumListItem.cs" />
+    <Compile Include="Genre\GenreCreate.cs" />
+    <Compile Include="Genre\GenreDetail.cs" />
+    <Compile Include="Genre\GenreEdit.cs" />
+    <Compile Include="Genre\GenreListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SongEdit.cs" />
   </ItemGroup>

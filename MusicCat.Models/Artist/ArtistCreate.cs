@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicCat.Models
+namespace MusicCat.Models.Artist
 {
-    public class ArtistDetail
+    public class ArtistCreate
     {
         //tr
-        public int ArtistId { get; set; }
+        [Required]
         public string ArtistName { get; set; }
         public string Hometown { get; set; }
         //tr

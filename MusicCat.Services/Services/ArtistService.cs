@@ -1,5 +1,7 @@
-﻿using MusicCat.Data;
+using MusicCat.Data;
+using MusicCat.Data.Entities;
 using MusicCat.Models;
+using MusicCat.Models.Artist;
 using MusicCat.WebAPI.Models;
 using System;
 using System.Collections.Generic;
@@ -7,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicCat.Services
+namespace MusicCat.Services.Services
 {
     //tr
     public class ArtistService

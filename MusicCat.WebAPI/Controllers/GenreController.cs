@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
-using MusicCat.Models;
-using MusicCat.Services;
+using MusicCat.Models.Genre;
+using MusicCat.Services.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +10,7 @@ using System.Web.Http;
 
 namespace MusicCat.WebAPI.Controllers
 {
+    //gs
     public class GenreController : ApiController
     {
         private GenreService CreateGenreService()
@@ -64,4 +65,5 @@ namespace MusicCat.WebAPI.Controllers
             return Ok();
         }
     }
+    //gs
 }

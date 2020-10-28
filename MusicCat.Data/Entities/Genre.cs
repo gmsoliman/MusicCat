@@ -6,10 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicCat.Data
+namespace MusicCat.Data.Entities
 {
     public class Genre
     {
+        //gs
         [Key]
         public int GenreId { get; set; }
         [Required]
@@ -25,5 +26,7 @@ namespace MusicCat.Data
         //[ForeignKey(nameof(Song))]
         //public int SongId { get; set; }
         //public virtual Song Song { get; set; }
+
+        //gs
     }
 }

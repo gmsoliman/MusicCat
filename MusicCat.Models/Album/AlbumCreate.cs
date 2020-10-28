@@ -5,14 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicCat.Models
+namespace MusicCat.Models.Album
 {
-    public class ArtistCreate
+    public class AlbumCreate
     {
-        //tr
+        //bh
         [Required]
-        public string ArtistName { get; set; }
-        public string Hometown { get; set; }
-        //tr
+        public string AlbumTitle { get; set; }
+        public int Year { get; set; }
+
+        //bh
+
     }
 }
