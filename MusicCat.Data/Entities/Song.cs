@@ -11,6 +11,7 @@ namespace MusicCat.Data.Entities
         public int SongId { get; set; }
         public string Title { get; set; }
         public decimal Length { get; set; }
+        public Guid OwnerId { get; set; }
 
         //foreignkey(nameof(album id))
 

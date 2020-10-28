@@ -67,7 +67,10 @@
     <Compile Include="Genre\GenreEdit.cs" />
     <Compile Include="Genre\GenreListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SongEdit.cs" />
+    <Compile Include="Song\SongCreate.cs" />
+    <Compile Include="Song\SongDetail.cs" />
+    <Compile Include="Song\SongEdit.cs" />
+    <Compile Include="Song\SongListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

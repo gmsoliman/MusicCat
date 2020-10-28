@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
-using MusicCat.Models;
-using MusicCat.Services;
+using MusicCat.Models.Song;
+using MusicCat.Services.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +10,11 @@ using System.Web.Http;
 
 namespace MusicCat.WebAPI.Controllers
 {
+
     [Authorize]
     public class SongController : ApiController
     {
-        private SongService CreateAlbumService()
+        private SongService CreateSongService()
         {
             var userID = Guid.Parse(User.Identity.GetUserId());
             var songService = new SongService(userID);
@@ -22,19 +23,19 @@ namespace MusicCat.WebAPI.Controllers
 
         public IHttpActionResult Get()
         {
-            SongService albumService = CreateSongService();
+            SongService songService = CreateSongService();
             var song = songService.GetSongs();
-            return Ok(songs);
+            return Ok(song);
         }
 
-        public IHttpActionResult Post(SongCreate album)
+        public IHttpActionResult Post(SongCreate song)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
             var service = CreateSongService();
 
-            if (!service.CreateSong(song)
+            if (!service.CreateSong(song))
                 return InternalServerError();
 
             return Ok();
@@ -42,8 +43,8 @@ namespace MusicCat.WebAPI.Controllers
 
         public IHttpActionResult Get(int id)
         {
-            SongService songService = CreateAlbumService();
-            var song = songService.GetSongByID(id);
+            SongService songService = CreateSongService();
+            var song = songService.GetSongById(id);
             return Ok(song);
         }
 
@@ -54,7 +55,7 @@ namespace MusicCat.WebAPI.Controllers
 
             var service = CreateSongService();
 
-            if (!service.UpdadteSong(song))
+            if (!service.UpdateSong(song))
                 return InternalServerError();
 
             return Ok();
