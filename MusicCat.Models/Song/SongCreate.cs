@@ -17,6 +17,10 @@ namespace MusicCat.Models.Song
                             
         public decimal Length { get; set; }
 
+        public int AlbumId { get; set; }
+
+        public int GenreId { get; set; }
+
 
     }
 }
