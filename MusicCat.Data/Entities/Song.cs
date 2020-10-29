@@ -19,9 +19,15 @@ namespace MusicCat.Data.Entities
         [Required]
         public Guid OwnerId { get; set; }
 
+        [ForeignKey(nameof(Genre))]
+        public int? GenreId { get; set; }
+        public virtual Genre Genre { get; set; }
+
+
         [ForeignKey(nameof(Album))]
-        public int AlbumId { get; set; }
+        public int? AlbumId { get; set; }
         public virtual Album Album { get; set; }
 
+        //public virtual ICollection<Genre> Genres { get; set; } = new List<Genre>();
     }
 }

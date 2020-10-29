@@ -22,9 +22,11 @@ namespace MusicCat.Services.Services
             var entity =
                 new Song()
                 {
-                   
+                    OwnerId = _userId,
                     Title = model.Title,
                     Length = model.Length,
+                    AlbumId = model.AlbumId,
+                    GenreId = model.GenreId
                     
                 };
             using ( var ctx = new ApplicationDbContext())
