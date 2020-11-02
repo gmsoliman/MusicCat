@@ -12,7 +12,8 @@ namespace MusicCat.Models.Album
         public int AlbumId { get; set; }
         public string AlbumTitle { get; set; }
         public int Year { get; set; }
-
+        public int ArtistId { get; set; }
+        public int GenreId { get; set; }
 
         //bh
     }

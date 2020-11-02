@@ -49,7 +49,8 @@ namespace MusicCat.Services.Services
                     {
                         SongID = e.SongId,
                         Title = e.Title,
-                                          
+                        GenreId = (int)e.GenreId,
+                        AlbumId = (int)e.AlbumId
                     }
             );
                 return query.ToArray();
