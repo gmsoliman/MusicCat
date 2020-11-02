@@ -62,14 +62,14 @@ namespace MusicCat.Services.Services
             throw new NotImplementedException();
         }
 
-        public bool UpdateSong(SongEdit model)
+        public bool UpdateSong(SongDetailAndEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var entity =
                     ctx
                         .Songs
-                        .Single(e => e.SongId == model.SongId && e.OwnerId == _userId);
+                        .Single(e => e.SongId == model.SongID && e.OwnerId == _userId);
 
                 entity.Title = model.Title;
                 entity.Length = model.Length;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MusicCat.Models.Artist
 {
-    public class ArtistDetail
+    public class ArtistDetailAndEdit
     {
         //tr
         public int ArtistId { get; set; }

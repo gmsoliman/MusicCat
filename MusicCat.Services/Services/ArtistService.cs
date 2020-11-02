@@ -60,7 +60,7 @@ namespace MusicCat.Services.Services
             }
         }
 
-        public ArtistDetail GetArtistById(int id)
+        public ArtistDetailAndEdit GetArtistById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -69,7 +69,7 @@ namespace MusicCat.Services.Services
                         .Artists
                         .Single(e => e.ArtistId == id && e.OwnerId == _userId);
                 return
-                    new ArtistDetail
+                    new ArtistDetailAndEdit
                     {
                         ArtistId = entity.ArtistId,
                         ArtistName = entity.ArtistName,
@@ -78,7 +78,7 @@ namespace MusicCat.Services.Services
             }
         }
 
-        public bool UpdateArtist(ArtistEdit model)
+        public bool UpdateArtist(ArtistDetailAndEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {

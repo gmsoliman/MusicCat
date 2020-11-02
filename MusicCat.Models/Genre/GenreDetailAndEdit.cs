@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MusicCat.Models.Genre
 {
     //gs
-    public class GenreEdit
+    public class GenreDetailAndEdit
     {
         public int GenreId { get; set; }
         public string Type { get; set; }

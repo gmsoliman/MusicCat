@@ -51,7 +51,7 @@ namespace MusicCat.Services.Services
                 return query.ToArray();
             }
         }
-        public GenreEdit GetGenreById(int id)
+        public GenreDetailAndEdit GetGenreById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -60,7 +60,7 @@ namespace MusicCat.Services.Services
                         .Genres
                         .Single(e => e.GenreId == id && e.OwnerId == _userId);
                 return
-                    new GenreEdit
+                    new GenreDetailAndEdit
                     {
                         GenreId = entity.GenreId,
                         Type = entity.Type,
@@ -68,7 +68,7 @@ namespace MusicCat.Services.Services
                     };
             }
         }
-        public bool UpdateGenre(GenreEdit model)
+        public bool UpdateGenre(GenreDetailAndEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {
