@@ -72,7 +72,8 @@ namespace MusicCat.Services.Services
 
                 entity.Title = model.Title;
                 entity.Length = model.Length;
-                ;
+                entity.AlbumId = model.AlbumId;
+                entity.GenreId = model.GenreId;
 
                 return ctx.SaveChanges() == 1;
             }
