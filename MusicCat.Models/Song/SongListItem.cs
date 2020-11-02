@@ -11,12 +11,9 @@ namespace MusicCat.Models.Song
     {
         public int SongID { get; set; }
         public string Title { get; set; }
-        [Display(Name = "Created")]
-        public DateTimeOffset CreatedUtc { get; set; }
-        public int Lenght { get; set; }
-        public int GenreId { get; set; }
+        public decimal Length { get; set; }
         public int AlbumId { get; set; }
-
+        public int GenreId { get; set; }
     }
 }
 //JAH

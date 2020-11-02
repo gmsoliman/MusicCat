@@ -58,12 +58,31 @@ namespace MusicCat.Services.Services
                                 AlbumTitle = e.AlbumTitle,
                                 Year = e.Year,
                                 ArtistId = (int)e.ArtistId,
-                                GenreId = (int)e.GenreId
                             });
                     return query.ToArray();
                 }
             }
-            public AlbumDetail GetAlbumByID(int id)
+            public IEnumerable<AlbumListItem> GetAllAlbumsByGenre(int id)
+            {
+                using (var ctx = new ApplicationDbContext())
+                {
+                    var query =
+                        ctx
+                        .Albums
+                        .Where(e => e.GenreId == id && e.OwnerId == _userID)
+                        .Select(
+                            e =>
+                            new AlbumListItem
+                            {
+                                AlbumId = e.AlbumId,
+                                AlbumTitle = e.AlbumTitle,
+                                Year = e.Year,
+                                ArtistId = (int)e.ArtistId,
+                            });
+                    return query.ToArray();
+                }
+            }
+            public AlbumDetailAndEdit GetAlbumByID(int id)
             {
                 using (var ctx = new ApplicationDbContext())
                 {
@@ -72,7 +91,7 @@ namespace MusicCat.Services.Services
                         .Albums
                         .Single(e => e.AlbumId == id && e.OwnerId == _userID);
                     return
-                        new AlbumDetail
+                        new AlbumDetailAndEdit
                         {
                             AlbumId = entity.AlbumId,
                             AlbumTitle = entity.AlbumTitle,
@@ -82,7 +101,7 @@ namespace MusicCat.Services.Services
                         };
                 }
             }
-            public bool UpdateAlbum(AlbumEdit model)
+            public bool UpdateAlbum(AlbumDetailAndEdit model)
             {
                 using (var ctx = new ApplicationDbContext())
                 {

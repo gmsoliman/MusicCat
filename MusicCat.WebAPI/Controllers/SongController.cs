@@ -48,7 +48,16 @@ namespace MusicCat.WebAPI.Controllers
             return Ok(song);
         }
 
-        public IHttpActionResult Put(SongEdit song)
+        [Route("api/GetSongsByGenre/{id}")]
+        [HttpGet]
+        public IHttpActionResult GetSongsByGenre(int id)
+        {
+            SongService songService = CreateSongService();
+            var song = songService.GetAllSongsByGenre(id);
+            return Ok(song);
+        }
+
+        public IHttpActionResult Put(SongDetailAndEdit song)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);

@@ -42,7 +42,7 @@ namespace MusicCat.WebAPI.Controllers
             return Ok(artist);
         }
 
-        public IHttpActionResult Put(ArtistEdit artist)
+        public IHttpActionResult Put(ArtistDetailAndEdit artist)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);

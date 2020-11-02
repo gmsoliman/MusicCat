@@ -20,8 +20,6 @@ namespace MusicCat.Models.Song
         public int AlbumId { get; set; }
 
         public int GenreId { get; set; }
-
-
     }
 }
 //JAH

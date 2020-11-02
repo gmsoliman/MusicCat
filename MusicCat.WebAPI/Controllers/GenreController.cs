@@ -43,7 +43,7 @@ namespace MusicCat.WebAPI.Controllers
 
             return Ok();
         }
-        public IHttpActionResult Put(GenreEdit genre)
+        public IHttpActionResult Put(GenreDetailAndEdit genre)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
