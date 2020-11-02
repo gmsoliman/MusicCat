@@ -20,10 +20,14 @@ namespace MusicCat.Data.Entities
         public int Year { get; set; }
 
         [ForeignKey(nameof(Artist))]
-        public int ArtistId { get; set; }
+        public int? ArtistId { get; set; }
         public virtual Artist Artist { get; set; }
 
-        public virtual ICollection<Genre> Genres { get; set; } = new List<Genre>();
+        [ForeignKey(nameof(Genre))]
+        public int? GenreId { get; set; }
+        public virtual Genre Genre { get; set; }
+
+        //public virtual ICollection<Genre> Genres { get; set; } = new List<Genre>();
 
         public virtual ICollection<Song> Songs { get; set; } = new List<Song>();
     } //bh

@@ -19,13 +19,16 @@ namespace MusicCat.Data.Entities
         public string Type { get; set; }
         public string Description { get; set; }
 
-        [ForeignKey(nameof(Album))]
-        public int AlbumId { get; set; }
-        public virtual Album Album { get; set; }
+        public virtual ICollection<Album> Albums { get; set; } = new List<Album>();
+        public virtual ICollection<Song> Songs { get; set; } = new List<Song>();
 
-        [ForeignKey(nameof(Song))]
-        public int SongId { get; set; }
-        public virtual Song Song { get; set; }
+        //[ForeignKey(nameof(Album))]
+        //public int? AlbumId { get; set; }
+        //public virtual Album Album { get; set; }
+
+        //[ForeignKey(nameof(Song))]
+        //public int? SongId { get; set; }
+        //public virtual Song Song { get; set; }
 
         //gs
     }
