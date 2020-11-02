@@ -29,7 +29,9 @@ namespace MusicCat.Services.Services
                     {
                         OwnerId = _userID,
                         AlbumTitle = model.AlbumTitle,
-                        Year = model.Year
+                        Year = model.Year,
+                        ArtistId = model.ArtistId,
+                        GenreId = model.GenreId
                     };
 
                 using (var ctx = new ApplicationDbContext())
@@ -54,7 +56,9 @@ namespace MusicCat.Services.Services
                             {
                                 AlbumId = e.AlbumId,
                                 AlbumTitle = e.AlbumTitle,
-                                Year = e.Year
+                                Year = e.Year,
+                                ArtistId = (int)e.ArtistId,
+                                GenreId = (int)e.GenreId
                             });
                     return query.ToArray();
                 }
@@ -72,7 +76,9 @@ namespace MusicCat.Services.Services
                         {
                             AlbumId = entity.AlbumId,
                             AlbumTitle = entity.AlbumTitle,
-                            Year = entity.Year
+                            Year = entity.Year,
+                            ArtistId = (int)entity.ArtistId,
+                            GenreId = (int)entity.GenreId
                         };
                 }
             }
