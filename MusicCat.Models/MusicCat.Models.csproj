@@ -63,7 +63,6 @@
     <Compile Include="Album\AlbumEdit.cs" />
     <Compile Include="Album\AlbumListItem.cs" />
     <Compile Include="Genre\GenreCreate.cs" />
-    <Compile Include="Genre\GenreDetail.cs" />
     <Compile Include="Genre\GenreEdit.cs" />
     <Compile Include="Genre\GenreListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

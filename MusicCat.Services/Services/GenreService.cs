@@ -51,7 +51,7 @@ namespace MusicCat.Services.Services
                 return query.ToArray();
             }
         }
-        public GenreDetail GetGenreById(int id)
+        public GenreEdit GetGenreById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -60,7 +60,7 @@ namespace MusicCat.Services.Services
                         .Genres
                         .Single(e => e.GenreId == id && e.OwnerId == _userId);
                 return
-                    new GenreDetail
+                    new GenreEdit
                     {
                         GenreId = entity.GenreId,
                         Type = entity.Type,
