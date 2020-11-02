@@ -49,19 +49,53 @@ namespace MusicCat.Services.Services
                     {
                         SongID = e.SongId,
                         Title = e.Title,
-                        GenreId = (int)e.GenreId,
+                        Length = e.Length,
                         AlbumId = (int)e.AlbumId
                     }
             );
                 return query.ToArray();
-
             }
         }
-        public object GetSongById(int id)
+        
+        public SongDetailAndEdit GetSongById(int id)
         {
-            throw new NotImplementedException();
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Songs
+                    .Single(e => e.SongId == id && e.OwnerId == _userId);
+                return
+                    new SongDetailAndEdit
+                    {
+                        SongID = entity.SongId,
+                        Title = entity.Title,
+                        Length = entity.Length,
+                        AlbumId = (int)entity.AlbumId,
+                        GenreId = (int)entity.GenreId
+                    };
+            }
         }
-
+        public IEnumerable<SongListItem> GetAllSongsByGenre(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                    .Songs
+                    .Where(e => e.GenreId == id && e.OwnerId == _userId)
+                    .Select(
+                        e =>
+                        new SongListItem
+                        {
+                            SongID = e.SongId,
+                            Title = e.Title,
+                            Length = e.Length,
+                            AlbumId = (int)e.AlbumId,
+                        });
+                return query.ToArray();
+            }
+        }
         public bool UpdateSong(SongDetailAndEdit model)
         {
             using (var ctx = new ApplicationDbContext())
