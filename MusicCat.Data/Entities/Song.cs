@@ -28,6 +28,6 @@ namespace MusicCat.Data.Entities
         public int? AlbumId { get; set; }
         public virtual Album Album { get; set; }
 
-        //public virtual ICollection<Genre> Genres { get; set; } = new List<Genre>();
+        public virtual ICollection<Genre> Genres { get; set; } = new List<Genre>();
     }
 }

@@ -15,7 +15,8 @@ namespace MusicCat.Services.Services
         private readonly Guid _userId;
 
         public SongService(Guid userId)
-        { _userId = userId;
+        {
+            _userId = userId;
         }
         public bool CreateSong(SongCreate model)
         {
@@ -27,9 +28,9 @@ namespace MusicCat.Services.Services
                     Length = model.Length,
                     AlbumId = model.AlbumId,
                     GenreId = model.GenreId
-                    
+
                 };
-            using ( var ctx = new ApplicationDbContext())
+            using (var ctx = new ApplicationDbContext())
             {
                 ctx.Songs.Add(entity);
                 return ctx.SaveChanges() == 1;
@@ -44,7 +45,7 @@ namespace MusicCat.Services.Services
                     .Songs
                     .Where(e => e.OwnerId == _userId)
                         .Select(
-                                e => 
+                                e =>
                     new SongListItem
                     {
                         SongID = e.SongId,
@@ -56,7 +57,7 @@ namespace MusicCat.Services.Services
                 return query.ToArray();
             }
         }
-        
+
         public SongDetailAndEdit GetSongById(int id)
         {
             using (var ctx = new ApplicationDbContext())
