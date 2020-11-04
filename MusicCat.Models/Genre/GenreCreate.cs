@@ -15,6 +15,9 @@ namespace MusicCat.Models.Genre
         [MaxLength (50, ErrorMessage ="The entry's length exceeds the maximum of 50 characters.")]
         public string Type { get; set; }
         public string Description { get; set; }
+
+        //public int AlbumId { get; set; }
+        //public int SongId { get; set; }
     }
     //gs
 }
