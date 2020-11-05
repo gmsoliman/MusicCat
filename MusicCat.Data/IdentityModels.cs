@@ -1,4 +1,4 @@
-﻿using System.Data.Entity;
+using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Security.Claims;
@@ -7,6 +7,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using MusicCat.Data;
+using MusicCat.Data.Entities;
 
 namespace MusicCat.WebAPI.Models
 {
@@ -48,6 +49,31 @@ namespace MusicCat.WebAPI.Models
                 .Configurations
                 .Add(new IdentityUserLoginConfiguration())
                 .Add(new IdentityUserRoleConfiguration());
+
+            //modelBuilder.Entity<Album>()
+            //    .HasMany<Song>(album => album.Songs)
+            //    .WithRequired()
+            //    .WillCascadeOnDelete(true);
+
+            //modelBuilder.Entity<Artist>()
+            //    .HasMany<Song>(artist => artist.Songs)
+            //    .WithRequired()
+            //    .WillCascadeOnDelete(true);
+
+            //modelBuilder.Entity<Artist>()
+            //    .HasMany<Album>(artist => artist.Albums)
+            //    .WithRequired()
+            //    .WillCascadeOnDelete(true);
+
+            //modelBuilder.Entity<Genre>()
+            //    .HasMany<Song>(genre => genre.Songs)
+            //    .WithRequired()
+            //    .WillCascadeOnDelete(true);
+
+            //modelBuilder.Entity<Genre>()
+            //    .HasMany<Album>(genre => genre.Albums)
+            //    .WithRequired()
+            //    .WillCascadeOnDelete(true);
         }
     }
     public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>

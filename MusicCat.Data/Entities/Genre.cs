@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicCat.Data
+namespace MusicCat.Data.Entities
 {
     public class Genre
     {
@@ -19,12 +19,15 @@ namespace MusicCat.Data
         public string Type { get; set; }
         public string Description { get; set; }
 
+        public virtual ICollection<Album> Albums { get; set; } = new List<Album>();
+        public virtual ICollection<Song> Songs { get; set; } = new List<Song>();
+
         //[ForeignKey(nameof(Album))]
-        //public int AlbumId { get; set; }
+        //public int? AlbumId { get; set; }
         //public virtual Album Album { get; set; }
 
         //[ForeignKey(nameof(Song))]
-        //public int SongId { get; set; }
+        //public int? SongId { get; set; }
         //public virtual Song Song { get; set; }
 
         //gs

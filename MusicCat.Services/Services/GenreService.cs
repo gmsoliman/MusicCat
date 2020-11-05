@@ -1,5 +1,5 @@
-﻿using MusicCat.Data;
-using MusicCat.Models;
+﻿using MusicCat.Data.Entities;
+using MusicCat.Models.Genre;
 using MusicCat.WebAPI.Models;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicCat.Services
+namespace MusicCat.Services.Services
 {
     //gs
     public class GenreService
@@ -24,7 +24,9 @@ namespace MusicCat.Services
                 {
                     OwnerId = _userId,
                     Type = model.Type,
-                    Description = model.Description
+                    Description = model.Description,
+                    //AlbumId = model.AlbumId,
+                    //SongId = model.SongId
                 };
             using (var ctx = new ApplicationDbContext())
             {
@@ -51,7 +53,7 @@ namespace MusicCat.Services
                 return query.ToArray();
             }
         }
-        public GenreDetail GetGenreById(int id)
+        public GenreDetailAndEdit GetGenreById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -60,7 +62,7 @@ namespace MusicCat.Services
                         .Genres
                         .Single(e => e.GenreId == id && e.OwnerId == _userId);
                 return
-                    new GenreDetail
+                    new GenreDetailAndEdit
                     {
                         GenreId = entity.GenreId,
                         Type = entity.Type,
@@ -68,7 +70,8 @@ namespace MusicCat.Services
                     };
             }
         }
-        public bool UpdateGenre(GenreEdit model)
+
+        public bool UpdateGenre(GenreDetailAndEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {

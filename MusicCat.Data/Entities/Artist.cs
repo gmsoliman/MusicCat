@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicCat.Data
+namespace MusicCat.Data.Entities
 {
     public class Artist
     {
@@ -18,6 +18,10 @@ namespace MusicCat.Data
         public string ArtistName { get; set; }
         [Required]
         public string Hometown { get; set; }
+
+        public virtual ICollection<Album> Albums { get; set; } = new List<Album>();
+        public virtual ICollection<Song> Songs { get; set; } = new List<Song>();
         //tr
+
     }
 }

@@ -152,6 +152,15 @@
     <Compile Include="Entities\Artist.cs" />
     <Compile Include="Entities\Genre.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\202011031655565_InitialCreate.cs" />
+    <Compile Include="Migrations\202011031655565_InitialCreate.Designer.cs">
+      <DependentUpon>202011031655565_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011031712187_first.cs" />
+    <Compile Include="Migrations\202011031712187_first.Designer.cs">
+      <DependentUpon>202011031712187_first.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Song.cs" />
   </ItemGroup>
@@ -159,6 +168,13 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202011031655565_InitialCreate.resx">
+      <DependentUpon>202011031655565_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011031712187_first.resx">
+      <DependentUpon>202011031712187_first.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

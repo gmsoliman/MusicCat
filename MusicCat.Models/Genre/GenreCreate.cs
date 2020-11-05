@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicCat.Models
+namespace MusicCat.Models.Genre
 {
     //gs
     public class GenreCreate
@@ -15,6 +15,9 @@ namespace MusicCat.Models
         [MaxLength (50, ErrorMessage ="The entry's length exceeds the maximum of 50 characters.")]
         public string Type { get; set; }
         public string Description { get; set; }
+
+        //public int AlbumId { get; set; }
+        //public int SongId { get; set; }
     }
     //gs
 }

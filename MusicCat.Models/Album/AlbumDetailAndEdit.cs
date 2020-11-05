@@ -4,17 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicCat.Models
+namespace MusicCat.Models.Album
 {
-    public class AlbumDetail
+    public class AlbumDetailAndEdit
     {
         //bh
         public int AlbumId { get; set; }
         public string AlbumTitle { get; set; }
         public int Year { get; set; }
-
-        //foreignkey(nameof(artist id))
-
+        public int ArtistId { get; set; }
+        public int GenreId { get; set; }
         //bh
     }
 }

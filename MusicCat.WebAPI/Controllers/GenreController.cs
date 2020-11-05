@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNet.Identity;
-using MusicCat.Models;
-using MusicCat.Services;
+using MusicCat.Models.Genre;
+using MusicCat.Services.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,7 +43,7 @@ namespace MusicCat.WebAPI.Controllers
 
             return Ok();
         }
-        public IHttpActionResult Put(GenreEdit genre)
+        public IHttpActionResult Put(GenreDetailAndEdit genre)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);

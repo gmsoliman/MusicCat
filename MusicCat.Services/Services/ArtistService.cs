@@ -1,5 +1,7 @@
-﻿using MusicCat.Data;
+using MusicCat.Data;
+using MusicCat.Data.Entities;
 using MusicCat.Models;
+using MusicCat.Models.Artist;
 using MusicCat.WebAPI.Models;
 using System;
 using System.Collections.Generic;
@@ -7,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicCat.Services
+namespace MusicCat.Services.Services
 {
     //tr
     public class ArtistService
@@ -58,7 +60,7 @@ namespace MusicCat.Services
             }
         }
 
-        public ArtistDetail GetArtistById(int id)
+        public ArtistDetailAndEdit GetArtistById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -67,7 +69,7 @@ namespace MusicCat.Services
                         .Artists
                         .Single(e => e.ArtistId == id && e.OwnerId == _userId);
                 return
-                    new ArtistDetail
+                    new ArtistDetailAndEdit
                     {
                         ArtistId = entity.ArtistId,
                         ArtistName = entity.ArtistName,
@@ -76,7 +78,7 @@ namespace MusicCat.Services
             }
         }
 
-        public bool UpdateArtist(ArtistEdit model)
+        public bool UpdateArtist(ArtistDetailAndEdit model)
         {
             using (var ctx = new ApplicationDbContext())
             {

@@ -4,18 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MusicCat.Models.Album
+namespace MusicCat.Models.Song
 {
-    public class AlbumListItem
+    public class SongDetailAndEdit
     {
-        //bh
+        public int SongID { get; set; }
+        public string Title { get; set; }
+        public decimal Length { get; set; }
         public int AlbumId { get; set; }
-        public string AlbumTitle { get; set; }
-        public int Year { get; set; }
-        public int ArtistId { get; set; }
-
         public int GenreId { get; set; }
-
-        //bh
     }
 }
+//JAH
