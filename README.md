@@ -41,7 +41,7 @@ You should have gotten a 200 OK response back. Next, you'll request the authenti
 4. You should see an access token in the response window. Copy the token.
 
 5. In the headers tab, add a header with the key "Authorization" (no quotes) and set the value to "Bearer [your token]" (no quotes or brackets). It should look like the following:
-![Authorization Example](https://github.com/gmsoliman/MusicCatREADMEAssets/blob/main/tokenrequest.PNG)
+![Authorization Example](https://github.com/gmsoliman/MusicCatREADMEAssets/blob/main/authtoken.PNG)
 
 Now you're able to make requests and utilize the endpoints of the API!
 
