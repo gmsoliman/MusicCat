@@ -67,7 +67,7 @@ A **PUT** request is used to update/change an existing item in a data table. Mak
 
 #### DELETE
 Finally, a **DELETE** request is used to delete an item from the data table. Making this request is the same as making a **GET** by ID request (add the endpoint path to the end of the request url as well as the item's ID number), only you need to make sure to switch the request to **DELETE**. Below is an example:
-![DELETE Request Example](![POST Request Example](https://github.com/gmsoliman/MusicCatREADMEAssets/blob/main/deleteexample.PNG)
+![Delete Request Example](https://github.com/gmsoliman/MusicCatREADMEAssets/blob/main/deleteexample.PNG)
 
 ## Resources Used
 Below are some resources that the group found useful while working on this project:
