@@ -34,7 +34,7 @@ You should have gotten a 200 OK response back. Next, you'll request the authenti
 1. Add **/token** to the URL (it should look like: **localhost:XXXXX/token**), and make sure your request is set to **GET**.
 
 2. In the body tab, input the same email and password you registered with for your username and password. In addition, you'll need to input the **grant_type** as shown below:
-![Token Request](https://github.com/gmsoliman/MusicCatREADMEAssets/blob/main/token.PNG)
+![Token Request](https://github.com/gmsoliman/MusicCatREADMEAssets/blob/main/tokenrequest.PNG)
 
 3. Go to the **Headers** tab and check **Content-Type**, then press **Send**.
 
